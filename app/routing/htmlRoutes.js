@@ -14,14 +14,16 @@ app.use(express.json());
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/survey", function (req, res) {
-
+    res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/add", function (req, res) {
+    res.sendFile(path.join(__dirname, "add.html"));
 });
 
 // Displays all characters
 app.get("/api/characters", function (req, res) {
+    return res.json(characters);
 });
 
 // Displays a single character, or returns false
