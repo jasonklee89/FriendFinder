@@ -1,7 +1,7 @@
 var friends = [
     {
         name: "Ein",
-        photo: "https://www.google.com/url?sa=i&source=images&cd=&ved=&url=https%3A%2F%2Fcowboybebop.fandom.com%2Fwiki%2FPembroke_Welsh_Corgi&psig=AOvVaw3qI_c8lyVNLvM0OTllb-aU&ust=1555805441454889",
+        photo: "https://cdn.myanimelist.net/s/common/uploaded_files/1447973556-70d352e0f7a8d658d9479d30a527eb15.png",
         scores: [
             "3",
             "5",
