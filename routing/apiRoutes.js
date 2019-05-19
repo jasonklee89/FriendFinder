@@ -15,17 +15,15 @@ module.exports = function (app) {
 
         var userData = req.body;
         var userScores = userData.scores;
-
-        // console.log(userScores);
-        
         var totalDifference = 0;
-
+        // Looping through the friends array in friends.js
         for (var i = 0; i < friends.length; i++) {
             console.log(friends[i]);
             totalDifference = 0;
-
+            // Finding the friend with the least totalDifference in scores
             for(var j = 0; i < friends[i].scores[j]; j++) {
                 totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+                // Updates the bestMatch whenever there is a lesser totalDifference
                 if (totalDifference <= bestMatch.friendDifference) {
                     bestMatch.name = friends[i].name;
                     bestMatch.photo = friends[i].photo;
@@ -36,26 +34,4 @@ module.exports = function (app) {
         friends.push(userData);
         res.json(bestMatch);
     });
-}
-
-
-
-// var express = require("express");
-// var path = require("path");
-
-// // Sets up the Express App
-// // =============================================================
-// var app = express();
-// var PORT = 3000;
-
-// // Sets up the Express app to handle data parsing
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
-
-// // Basic route that sends the user first to the AJAX Page
-
-// // Starts the server to begin listening
-// // =============================================================
-// app.listen(PORT, function () {
-//     console.log("App listening on PORT " + PORT);
-// });
+};
